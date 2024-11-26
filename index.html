@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --yellow: #FFBE0B;
+            --orange: #FB5607;
+            --pink: #FF006E;
+            --violett: #8338EC;
+            --blue: #3A86FF;
+        }
+        h1 {
+            color: var(--orange);
+        }
+        h1:hover {
+            color: var(--pink);
+        }
+        body {
+            background-color: var(--yellow);
+        }
+        button {
+            font-size: 25px;
+            background-color: var(--violett);
+            color: var(--blue);
+            padding: 20px 30px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nyan Cat</h1>
+    <video id="video" src="NyanCat.webm"></video>
+    <button id="play">MiauMiau</button>
+    <script>
+    const play = document.getElementById("play");
+    console.log(play)
+    const video = document.getElementById("video");
+    play.addEventListener("click",function(){
+     video.play()
+    })
+    </script>
+</body>
+</html>
