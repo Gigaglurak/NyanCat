@@ -16,13 +16,19 @@
             --lightyellow: #F2F79E;
         }
         h1 {
-            color: var(--black);
+            color: black;
+            margin:0;
         }
         h1:hover {
             color: var(--lightgreen);
         }
         body {
-            background-color: var(--lightyellow);
+            background-color: var(--yellow);
+            padding: 20px;
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+        align-items: center;
         }
         button {
             font-size: 25px;
@@ -30,19 +36,29 @@
             color: var(--black);
             padding: 20px 30px;
             border-radius: 15px;
+            border: none;
+        }
+        video {
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <h1>Nyan Cat</h1>
-    <video id="video" src="NyanCat.webm"></video>
-    <button id="play">MiauMiau</button>
+    <video id="video" src="betttternyancat.webm"></video>
+    <button id="play">Miau Miau</button>
     <script>
     const play = document.getElementById("play");
     console.log(play)
     const video = document.getElementById("video");
     play.addEventListener("click",function(){
-     video.play()
+        if(video.paused){
+            video.play();
+            play.innerText = "Stop Stop"
+        } else {
+            video.pause();
+            play.innerText = "Miau Miau"
+        }
     })
     </script>
 </body>
